@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>url shortener</title>
+</head>
+<body>
+    <h1>URL SHORTENER</h1>
+<hr>
+    {% for mgs in get_flashed_messages() %}
+    {{ mgs }}
+    {% endfor %}
+<hr>
+<br>
+    <form action="url" method="post">
+        <label for="url"> website url</label>
+        <input type="url" name="url" id="">
+        <br>
+        <label for="short"> short name</label>
+        <input type="text" name="short" id="">
+        <br>
+        <input type="submit" value="shorten">
+    </form>
+    <form action="url" method="post" enctype="multipart/form-data">
+        <label for="file"> upload document</label>
+        <input type="file" name="file" id="">
+        <br>
+        <label for="short"> short name</label>
+        <input type="text" name="short" id="">
+        <br>
+        <input type="submit" value="shorten">
+    </form>
+</body>
+</html>
